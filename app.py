@@ -27,7 +27,7 @@ def predict_datapoint():
         return render_template('index.html', results=results[0])  # Render index.html for POST requests too
 
 if __name__ == "__main__":
-    application.run(host="0.0.0.0", debug=True)
+    application.run(debug=True)
 
 
 
