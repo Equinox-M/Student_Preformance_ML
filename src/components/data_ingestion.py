@@ -6,7 +6,7 @@ import pandas as pd  # Importing pandas library with an alias pd
 from sklearn.model_selection import train_test_split  # Importing train_test_split function from sklearn.model_selection module
 from dataclasses import dataclass  # Importing dataclass decorator from dataclasses module
 from src.components.data_transformation import DataTransformation, DataTransformationConfig
-
+from src.components.model_trainer import ModelTrainerConfig, ModelTrainer
 
 @dataclass  # Decorator indicating that the following class is a data class
 class DataIngestionConfig:  # Defining a data class named DataIngestionConfig
@@ -42,4 +42,7 @@ if __name__ == "__main__":  # Entry point of the script
     obj = DataIngestion()  # Creating an instance of DataIngestion class
     train_data,test_data=obj.initiate_data_ingestion()  # Calling the method to initiate data ingestion process
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
+
+    modeltrainer= ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
