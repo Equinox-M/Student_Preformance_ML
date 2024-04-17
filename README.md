@@ -1,5 +1,6 @@
 ## END to END Machine Learning Project For Student preformance 
 This project aims to predict student performance based on various factors such as gender, ethnicity, parental education level, lunch type, test preparation course, reading score, and writing score.
+![Screenshot 2024-04-18 at 12 59 21 AM](https://github.com/Equinox-M/Student_Preformance_ML/assets/92346639/a129bd51-213b-41e0-9f37-277fb127dc70)
 
 ## Project Structure
 
